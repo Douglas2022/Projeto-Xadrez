@@ -7,9 +7,9 @@
         public int QtsMovimentos { get; protected set; }//Acessada e entrada por ela mesmo.
         public Tabuleiro Tab { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, int qtsMovimentos, Tabuleiro tab)
+        public Peca(Tabuleiro tab,Cor cor)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.Tab = tab;
             this.cor = cor;
             this.QtsMovimentos = 0;

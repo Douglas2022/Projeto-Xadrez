@@ -17,5 +17,11 @@
         {
             return pecas[linha, coluna];
         }
+        //Cplocando uma peça no tabuleiro.
+        public void ColocarPeca(Peca P,Posicao pos)
+        {
+            pecas[pos.Linha, pos.Coluna] = P;
+            P.posicao = pos;
+        }
     }
 }
