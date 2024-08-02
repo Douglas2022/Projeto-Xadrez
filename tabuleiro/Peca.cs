@@ -7,13 +7,16 @@
         public int QtsMovimentos { get; protected set; }//Acessada e entrada por ela mesmo.
         public Tabuleiro Tab { get; protected set; }
 
-        public Peca(Tabuleiro tab,Cor cor)
+        public Peca(Tabuleiro tab, Cor cor)
         {
             this.posicao = null;
             this.Tab = tab;
             this.cor = cor;
             this.QtsMovimentos = 0;
-
+        }
+        public void incrementarQtdeMovimentos()
+        {
+            QtsMovimentos++;
         }
     }
 }

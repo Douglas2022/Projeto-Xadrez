@@ -40,6 +40,17 @@
             pecas[pos.Linha, pos.Coluna] = P;
             P.posicao = pos;
         }
+        public Peca RetirarPeca(Posicao pos)
+        {
+            if (peca(pos) == null)
+            {
+                return null;
+            }
+            Peca aux = peca(pos);
+            aux.posicao = null;
+            pecas[pos.Linha, pos.Coluna] = null;
+            return aux;
+        }
         //Testar se a posição é válida.
         public bool PosicaoValida(Posicao pos)
         {
