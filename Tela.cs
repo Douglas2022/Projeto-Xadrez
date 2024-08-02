@@ -1,5 +1,6 @@
 ﻿using System;
 using tabuleiro;
+using Xadrez;
 namespace Xadrez1
 {
     internal class Tela // Efeito do tabuleiro.
@@ -25,6 +26,13 @@ namespace Xadrez1
             }
             //Coloca as letras.
             Console.WriteLine("  a b c d e f g h");
+        }
+        public static PosicaoXadrez lerposicaoxadrez()
+        {
+            string s = Console.ReadLine();
+            char coluna  = s[0];
+            int linha = int.Parse(s[1] + "");
+            return new PosicaoXadrez(coluna, linha);
         }
         //Impressaõ de cor da peças
         public static void imprimirpeca(Peca peca)
